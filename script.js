@@ -2,7 +2,7 @@
 
 // Build a Dynamic To-Do List Application
 // Waiting for the DOM to fully load
-document.addEventListener('DOMContentLoaded', () =>{
+document.addEventListener('DOMContentLoaded', () => {
 
     // Selecting the "Add Task" button
     const addButton = document.getElementById('add-task-btn');
@@ -30,7 +30,9 @@ document.addEventListener('DOMContentLoaded', () =>{
         // Creating a remove button for the task
         const removeButton = document.createElement('button');
         removeButton.textContent = "Remove";
-        removeButton.className = 'remove-btn';
+
+        // Adding the class name
+        removeButton.classList.add('remove-btn');
 
         // Event listener for the remove button
         removeButton.onclick = () => {
@@ -50,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     // Event listener for the "Add Task" button
     addButton.addEventListener('click', addTask);
 
-    // Event listener for the "Enter" key pressin the input field
+    // Event listener for the "Enter" key pressing the input field
     taskInput.addEventListener('keypress', (event) => {
         if (event.key === 'Enter') {
             // Invoking addTask on DOMContentLoaded
@@ -58,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         }
     });
 });
+
 
 // Implement Local Storage for the To-Do List
 // Waiting for the DOM to fully load
