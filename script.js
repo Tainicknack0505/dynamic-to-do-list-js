@@ -51,15 +51,12 @@ document.addEventListener('DOMContentLoaded', () =>{
     addButton.addEventListener('click', addTask);
 
     // Event listener for the "Enter" key pressin the input field
-    addButton.addEventListener('click, addTask');
     taskInput.addEventListener('keypress', (event) => {
         if (event.key === 'Enter') {
+            // Invoking addTask on DOMContentLoaded
+            addTask();
         }
     });
-
-    // Invoking addTask on DOMContentLoaded
-    addTask();
-
 });
 
 // Implement Local Storage for the To-Do List
